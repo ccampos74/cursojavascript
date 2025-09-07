@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Conversor de Medidas</title>
+    <style>
+        body, html {
+            background-color: lightskyblue;
+        }
+        h1 {
+            font: bold 2em Arial;
+            text-align: center;
+        }
+        div {
+            text-align: center;
+
+        }
+        input {
+            font: normal 1.2em Arial;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        p {
+            font: normal 1.4em Arial;
+            text-align: center;
+        }
+        div#texto {
+            font: normal 1.6em Arial;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    quilômetro → km / 1000
+    hectômetro → hm / 100
+    decâmetro → dam / 10
+    metro → m
+    decímetro → dm * 10
+    centímetro → cm * 100
+    milímetro → mm * 1000
+    -->
+    <h1>Conversor de Medidas</h1>
+    <div>
+        <input type="button" value="Converter" onclick="clicar()">
+    </div>
+    <div id="texto">
+        <p>&#x261D Clique no botão acima para calcular. &#x261D</p>
+    </div>
+    <script>
+        function clicar() {
+            var metro = window.prompt('Digite uma distância em metros (m)')
+            var txt = window.document.getElementById('texto')
+            var m = metro.replace(",",".")
+            
+            txt.innerHTML = `<strong>A distância de ${metro.replace(".",",")} metros,corresponde a ...</strong><br>
+            ${m /1000} quilômetros (Km)<br>
+            ${m /100} hectômetros (Hm)<br>
+            ${m /10} decâmetros (Dam)<br>
+            ${m *10} decímetros (dm)<br>
+            ${m *100} centímetros (cm)<br>
+            ${m *1000} milímetros (mm)<br>`
+        }
+    </script>
+</body>
+</html>
