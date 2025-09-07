@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Desafio Boas Vindas</title>
+    <style>
+        body {
+            background-color: rgb(186, 230, 186);
+        }
+        div {
+            text-align: center;
+        }
+        h1 {
+            font: bold 2em Arial;
+            text-align: center;
+        }
+        input {
+            font: normal 1.3em Arial;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas Vindas</h1>
+    <div>
+        <input type="button" value="Inicie o desafio" onclick="clicar()">
+    </div>
+    <script>
+        function clicar() {
+            var nome = window.prompt('Qual é o seu nome?')
+            var idade = window.prompt('Qual a sua idade?')
+            window.alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade!`)
+        }
+    </script>
+</body>
+</html>
