@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: #123535;
+            color: white;
+            font: normal 20px Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'gray'
+        }
+
+        function entrar() {
+            a.innerText = "Entrou!"
+        }
+
+        function sair() {
+            a.innerText = "Saiu!"
+            a.style.background = '#123535'
+        }
+    </script>
+</body>
+</html>
