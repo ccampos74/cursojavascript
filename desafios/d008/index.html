@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Cálculo de Desconto</title>
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+        div > input {
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        div > p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    <div>
+        <input type="button" value="Desconto de 10%" onclick="clicar()">
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+    <script>
+        function clicar() {
+            var produto = window.prompt('Qual produto você está comprando?')
+            var preco = Number.parseFloat(window.prompt(`Qual o valor do(a) ${produto}?`)).toFixed(2)
+            var desc = Number.parseFloat(preco / 10).toFixed(2)
+            var precofinal = Number.parseFloat(preco - desc).toFixed(2)
+
+            var total = window.document.getElementById('res')
+            total.innerHTML = `O preço original: R$${preco}<br>Você ganhou: R$${desc} de desconto (10%)<br>Você pagará R$${precofinal} no produto ${produto}`
+        }
+    </script>
+</body>
+</html>
