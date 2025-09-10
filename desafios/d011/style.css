@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+header{
+    font-size: 1.5em;
+}
+input{
+    font-size: 0.8em;
+    padding: 10px;
+    border-radius: 8px;
+}
+section {
+    font-size: 1.4em;
+}
+#g {
+    background-color: rgb(185, 247, 185);
+    color: #7CB342;
+}
+#r {
+    background-color: rgb(236, 191, 191);
+    color: #F34235;
+}
