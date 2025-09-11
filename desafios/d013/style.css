@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #d1d1d1;
+}
+header {
+    font-size: 1.5em;
+}
+input {
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 8px;
+}
+p {
+    font-size: 1.2em;
+}
+#vml {
+    background-color: #faa8a8;
+    color: rgb(173, 0, 0);
+    padding: 5px;
+}
+#aml {
+    background-color: #ffe263;
+    color: rgb(163, 119, 7);
+    padding: 5px;
+}
+#vrd {
+    background-color: #38ec389d;
+    color: #065e06;
+    padding: 5px;
+}
